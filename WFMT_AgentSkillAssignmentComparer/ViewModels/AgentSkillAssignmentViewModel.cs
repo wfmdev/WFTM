@@ -27,7 +27,7 @@ namespace WFMT_AgentSkillAssignmentComparer.ViewModels
         {
         }
 
-        public AgentSkillAssignmentViewModel(AgentSkillAssignment asa)
+        public AgentSkillAssignmentViewModel(AgentSkillAssignmentsData asa)
         {
             Login_ID = asa.Login_ID;
             Extn = asa.Extn;

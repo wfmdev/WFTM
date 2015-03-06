@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WFMT_AgentSkillAssignmentComparer.Models
 {
-    class SkillAssignmentFile
+    class SkillAssignmentsDataFile
     {
         public string FilePath { get; set; }
-        public IEnumerable<AgentSkillAssignment> Assignments { get; set; }
+        public IEnumerable<AgentSkillAssignmentsData> AssignmentsData { get; set; }
     }
 }

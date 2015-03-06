@@ -85,6 +85,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\AgentSkillAssignment.cs" />
+    <Compile Include="Models\SkillAssignmentComparison.cs" />
     <Compile Include="ViewModels\AgentSkillAssignmentViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -101,10 +103,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\SkillPriority.cs" />
-    <Compile Include="Models\AgentSkillAssignment.cs" />
-    <Compile Include="Models\AgentSkillAssignmentComparison.cs" />
+    <Compile Include="Models\AgentSkillAssignmentsData.cs" />
     <Compile Include="Models\NonClassModels.cs" />
-    <Compile Include="Models\SkillAssignmentFile.cs" />
+    <Compile Include="Models\SkillAssignmentsDataFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
