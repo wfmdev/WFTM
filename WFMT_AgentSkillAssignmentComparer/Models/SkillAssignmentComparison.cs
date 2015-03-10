@@ -7,10 +7,10 @@ using LINQtoCSV;
 
 namespace WFMT_AgentSkillAssignmentComparer.Models
 {
-    class AgentSkillAssignment
+    class SkillAssignmentComparison
     {
-        [CsvColumn(Name = "Composite ID", FieldIndex = 1)]
-        public string Composite_ID { get { return Login_ID.ToString() + Skill_ID.ToString() + Priortiy; } }
+        [CsvColumn(Name = "Difference", FieldIndex = 1)]
+        public string Difference { get; set; }
 
         [CsvColumn(Name = "Login ID", FieldIndex = 2)]
         public int Login_ID { get; set; }
@@ -23,5 +23,11 @@ namespace WFMT_AgentSkillAssignmentComparer.Models
 
         [CsvColumn(Name = "Priority", FieldIndex = 5)]
         public string Priortiy { get; set; }
+
+        [CsvColumn(Name = "Skill ID B", FieldIndex = 6)]
+        public int Skill_ID_B { get; set; }
+
+        [CsvColumn(Name = "Priority B", FieldIndex = 7)]
+        public string Priortiy_B { get; set; }
     }
 }
