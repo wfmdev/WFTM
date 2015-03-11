@@ -7,7 +7,7 @@ using LINQtoCSV;
 
 namespace WFMT_AgentSkillAssignmentComparer.Models
 {
-    class SkillAssignmentDataComparison
+    public class SkillAssignmentDataComparison
     {
         [CsvColumn(Name = "Difference", FieldIndex = 1)]
         public string Difference { get; set; }

@@ -9,12 +9,13 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WFMT_AgentSkillAssignmentComparer</RootNamespace>
     <AssemblyName>WFMT_AgentSkillAssignmentComparer</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>Z:\Work Force Management\WFMTools\WFMTools -ASAC ver0.2\</PublishUrl>
+    <TargetFrameworkProfile />
+    <PublishUrl>Z:\Work Force Management\WFMTools\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -24,7 +25,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -84,10 +85,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Models\AgentSkillAssignment.cs" />
+    <Compile Include="AgentSkillComparisonWindow.xaml.cs">
+      <DependentUpon>AgentSkillComparisonWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\SkillAssignmentDataComparison.cs" />
-    <Compile Include="Models\SkillAssignmentComparison.cs" />
-    <Compile Include="ViewModels\AgentSkillAssignmentViewModel.cs" />
+    <Compile Include="ViewModels\AgentSkillComparisonViewModel.cs" />
+    <Compile Include="ViewModels\SkillAssignmentsComparisonViewModel.cs" />
+    <Page Include="AgentSkillComparisonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -104,7 +111,6 @@
   <ItemGroup>
     <Compile Include="Models\SkillPriority.cs" />
     <Compile Include="Models\AgentSkillAssignmentsData.cs" />
-    <Compile Include="Models\NonClassModels.cs" />
     <Compile Include="Models\SkillAssignmentsDataFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -151,6 +157,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
