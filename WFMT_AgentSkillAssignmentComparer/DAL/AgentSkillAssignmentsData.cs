@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using LINQtoCSV;
 using System.ComponentModel;
+using WFMT.ASAC.DAL;
+using WFMT.ASAC.Models;
 
 
 
-namespace WFMT_AgentSkillAssignmentComparer.Models
+namespace WFMT.ASAC.DAL
 {
     class AgentSkillAssignmentsData
     {

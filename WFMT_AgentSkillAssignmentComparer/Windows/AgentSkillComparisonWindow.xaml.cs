@@ -10,11 +10,11 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using WFMT_AgentSkillAssignmentComparer.ViewModels;
+using WFMT.ASAC.ViewModels;
 using System.Collections.ObjectModel;
 using System.Text.RegularExpressions;
 
-namespace WFMT_AgentSkillAssignmentComparer
+namespace WFMT.ASAC
 {
     /// <summary>
     /// Interaction logic for AgentSkillComparisonWindow.xaml

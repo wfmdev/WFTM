@@ -7,7 +7,7 @@
     <ProjectGuid>{6BEE24DE-0D1E-4DA6-A7E0-E23DCD9F7CE5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WFMT_AgentSkillAssignmentComparer</RootNamespace>
+    <RootNamespace>WFMT.ASAC</RootNamespace>
     <AssemblyName>WFMT_AgentSkillAssignmentComparer</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -88,12 +88,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\AgentSkillMapping.cs" />
+    <Compile Include="ViewModels\SkillAssignmentComparisonViewModel.cs" />
     <Compile Include="Windows\AgentSkillComparisonWindow.xaml.cs">
       <DependentUpon>AgentSkillComparisonWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\SkillAssignmentDataComparison.cs" />
-    <Compile Include="ViewModels\AgentSkillComparisonViewModel.cs" />
-    <Compile Include="ViewModels\SkillAssignmentsComparisonViewModel.cs" />
     <Page Include="Windows\AgentSkillComparisonWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -113,8 +112,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\SkillPriority.cs" />
-    <Compile Include="Models\AgentSkillAssignmentsData.cs" />
-    <Compile Include="Models\SkillAssignmentsDataFile.cs" />
+    <Compile Include="DAL\AgentSkillAssignmentsData.cs" />
+    <Compile Include="DAL\SkillAssignmentsDataFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -163,6 +162,7 @@
   <ItemGroup>
     <Resource Include="GlobemanArmsOut.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
