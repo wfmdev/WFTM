@@ -33,10 +33,12 @@ namespace WFMT.ASAC
         ObservableCollection<string> LoadedFileNames;
         SkillAssignmentsDataFile SelectedFile_A;
         SkillAssignmentsDataFile SelectedFile_B;
+        SkillAssignmentsDataFile SelectedFileToView;
         HashSet<AgentSkillMapping> SkillMap_A;
         HashSet<AgentSkillMapping> SkillMap_B;
         ObservableCollection<AgentSkillMapping> ComparisonSkillMap;
         ObservableCollection<SkillAssignmentComparisonViewModel> ComparisonDisplayList;
+        ObservableCollection<AgentSkillMapping> RelationalAssignments;
 
         public MainWindow()
         {
@@ -47,11 +49,14 @@ namespace WFMT.ASAC
             Lbx_LoadedFiles.ItemsSource = LoadedFileNames;
             Cbo_PickFile_A.ItemsSource = LoadedFileNames;
             Cbo_PickFile_B.ItemsSource = LoadedFileNames;
+            Cbo_PickFileToView.ItemsSource = LoadedFileNames;
             SkillMap_A = new HashSet<AgentSkillMapping>();
             SkillMap_B = new HashSet<AgentSkillMapping>();
             ComparisonSkillMap = new ObservableCollection<AgentSkillMapping>();
             ComparisonDisplayList = new ObservableCollection<SkillAssignmentComparisonViewModel>();
             Dtg_ComparisonResult.ItemsSource = ComparisonDisplayList;
+            RelationalAssignments = new ObservableCollection<AgentSkillMapping>();
+            Dtg_FileView.ItemsSource = RelationalAssignments;
         }
 
 
@@ -209,6 +214,37 @@ namespace WFMT.ASAC
 
             //AgentSkillComparisonWindow ascw = new AgentSkillComparisonWindow(sacvm);
             //ascw.Show();
+        }
+
+        private void Btn_ViewFile_Click(object sender, RoutedEventArgs e)
+        {
+            if (Cbo_PickFileToView.SelectedItem != null && LoadedFileNames.Contains(Cbo_PickFileToView.SelectedItem))
+            {
+                //Start Fresh
+                RelationalAssignments.Clear();
+                
+
+                foreach (var file in LoadedFiles)
+                {
+                    if (file.FilePath == Cbo_PickFileToView.SelectedItem)
+                    {
+                        SelectedFileToView = file;
+                    }
+                }
+
+                SelectedFileToView.AsRelational().ForEach(x => RelationalAssignments.Add(x));
+                Dtg_FileView.Items.Refresh();
+            }
+        }
+
+        private void Btn_ExportFile_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Dtg_FileView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
 
 

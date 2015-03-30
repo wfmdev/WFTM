@@ -21,6 +21,14 @@
                     <Button x:Name="Btn_ExportAvsB" Content="Export" Margin="179,64,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Btn_ExportAvsB_Click"/>
                 </Grid>
             </TabItem>
+            <TabItem x:Name="ASAC_Tab_ViewFile" Header="View File">
+                <Grid>
+                    <ComboBox x:Name="Cbo_PickFileToView" Margin="120,10,10,0" VerticalAlignment="Top"/>
+                    <Button x:Name="Btn_ViewFile" Content="View File" Margin="120,37,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Btn_ViewFile_Click"/>
+                    <Button x:Name="Btn_ExportFile" Content="Export" Margin="179,37,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Btn_ExportFile_Click"/>
+                    <DataGrid x:Name="Dtg_FileView" Margin="10,64,10,10" SelectionChanged="Dtg_FileView_SelectionChanged"/>
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>

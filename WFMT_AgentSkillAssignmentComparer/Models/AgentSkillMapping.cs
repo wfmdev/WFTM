@@ -25,5 +25,8 @@ namespace WFMT.ASAC.Models
 
         [CsvColumn(Name = "Priority", FieldIndex = 6)]
         public string Priority { get; set; }
+
+        [CsvColumn(Name = "CompositeID", FieldIndex = 7)]
+        public string CompositeID { get { return AgentID.ToString() + SkillID.ToString() + Priority; } }
     }
 }
