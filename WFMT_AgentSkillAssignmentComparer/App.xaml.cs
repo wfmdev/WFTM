@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace WFMT.ASAC
+namespace WFMT_AgentSkillAssignmentComparer
 {
     /// <summary>
     /// Interaction logic for App.xaml

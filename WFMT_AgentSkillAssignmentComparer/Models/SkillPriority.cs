@@ -7,7 +7,7 @@ using LINQtoCSV;
 
 
 
-namespace WFMT.ASAC.Models
+namespace WFMT_AgentSkillAssignmentComparer.Models
 {
     class SkillPriority
     {

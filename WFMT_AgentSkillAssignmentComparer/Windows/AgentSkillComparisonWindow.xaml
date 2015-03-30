@@ -1,9 +1,0 @@
-﻿<Window x:Class="WFMT.ASAC.AgentSkillComparisonWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Agent Skill Comparison">
-    <Grid>
-        <DataGrid x:Name="Dtg_AgentSkillComparisonDisplay" Margin="10"/>
-
-    </Grid>
-</Window>
